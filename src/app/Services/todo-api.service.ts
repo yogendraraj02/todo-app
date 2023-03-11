@@ -7,18 +7,18 @@ import { catchError } from 'rxjs';
 export class TodoApiService {
 
   constructor(private http : HttpClient) { }
-  baseUrl = `https://ffd1-2409-4043-2d8a-d2f5-eca4-6d8e-1e11-9c7f.in.ngrok.io`;
+  baseUrl = `https://todo-xg1b.onrender.com`;
   
   getTodos(){
     // let url = this.baseUrl + '/todos';
-    let url = 'http://localhost:3000/todos'
+    let url = '/todos'
     console.log("url",url);
     
     return this.http.get(url);
   }
 
   postTodo(desc:string){
-    let url = 'http://localhost:3000/todos/'
+    let url = '/todos/'
     console.log("url",url);
     let body = {
       description : desc,
@@ -26,7 +26,7 @@ export class TodoApiService {
     return this.http.post(url,body);
   }
   deleteTodo(id:any){
-    let url = `http://localhost:3000/todos/delete/${id}`
+    let url = `/todos/delete/${id}`
     console.log("url",url);
     
     return this.http.delete(url);
