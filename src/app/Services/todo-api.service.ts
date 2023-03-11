@@ -10,14 +10,14 @@ export class TodoApiService {
   
   getTodos(){
     // let url = this.baseUrl + '/todos';
-    let url = '/todos'
+    let url = this.baseUrl + '/todos'
     console.log("url",url);
     
     return this.http.get(url);
   }
 
   postTodo(desc:string){
-    let url = '/todos/'
+    let url =this.baseUrl +  '/todos/'
     console.log("url",url);
     let body = {
       description : desc,
@@ -25,7 +25,7 @@ export class TodoApiService {
     return this.http.post(url,body);
   }
   deleteTodo(id:any){
-    let url = `/todos/delete/${id}`
+    let url = this.baseUrl + `/todos/delete/${id}`
     console.log("url",url);
     
     return this.http.delete(url);
