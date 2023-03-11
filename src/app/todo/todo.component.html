@@ -1,0 +1,23 @@
+<!-- <tr >
+  <th scope="row">{{todo.id}}</th>
+  <td>{{todo.description | slice:0:4}}</td>
+  <td>{{todo.status}}</td>
+  <td>
+    <button type="submit" class="btn btn-danger">Delete</button>
+    <button type="submit" class="btn btn-success ms-1">Finished</button>
+  </td>
+</tr> -->
+<!-- <li>
+  <input type="checkbox" class="todo-status">
+  <span>Buy groceries</span>
+  <button>Delete</button>
+</li> -->
+<li class="todo-item">
+  <!-- <input type="checkbox" class="todo-status" id="todo1"> -->
+  <label for="todo1" class="todo-status-label">{{todo.description }}</label>
+  <span class="todo-status">
+<!-- <input type="checkbox" id="todo1-status" disabled checked>
+<label for="todo1-status">Complete</label> -->
+</span>
+<button (click)="deleteTodo(todo._id)" class="delete-btn">Delete</button>
+</li>

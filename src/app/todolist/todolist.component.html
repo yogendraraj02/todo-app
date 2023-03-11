@@ -1,0 +1,56 @@
+<!-- <table class="table mb-4">
+  <thead>
+    <tr>
+      <th scope="col">No.</th>
+      <th scope="col">Todo item</th>
+      <th scope="col">Status</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <app-todo *ngFor="let todo of todos" [todo]= "todo" ></app-todo> -->
+    <!-- <tr>
+      <th scope="row">1</th>
+      <td>Buy groceries for next week</td>
+      <td>In progress</td>
+      <td>
+        <button type="submit" class="btn btn-danger">Delete</button>
+        <button type="submit" class="btn btn-success ms-1">Finished</button>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Renew car insurance</td>
+      <td>In progress</td>
+      <td>
+        <button type="submit" class="btn btn-danger">Delete</button>
+        <button type="submit" class="btn btn-success ms-1">Finished</button>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Sign up for online course</td>
+      <td>In progress</td>
+      <td>
+        <button type="submit" class="btn btn-danger">Delete</button>
+        <button type="submit" class="btn btn-success ms-1">Finished</button>
+      </td>
+    </tr> -->
+  <!-- </tbody>
+</table> -->
+
+
+
+
+<div class="todo-app">
+  <h1>Todo List</h1>
+  <form class="todo-form" id="todo-form">
+    <input type="text" #Todo class="todo-input" id="todo-input" placeholder="Enter a todo...">
+    <button (click)="addTodo(Todo.value)" type="submit" class="add-btn">Add</button>
+  </form>
+  <ul class="todo-list" id="todo-list">
+    <app-todo *ngFor="let todo of todos" [todo]= "todo" (deleteRequest)="deleteTodoFromList($event)"></app-todo>      
+  </ul>
+</div>
+
+
